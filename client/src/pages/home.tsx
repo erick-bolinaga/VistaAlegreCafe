@@ -12,27 +12,29 @@ export default function Home() {
     <div className="flex flex-col items-center">
       {/* Hero Section */}
       <section className="w-full bg-gradient-to-b from-primary/10 to-background py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold mb-4">Café Vista Alegre</h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            Sabores auténticos con vista al mar
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <img
-              src="https://images.unsplash.com/photo-1708597543370-604fb27a9754"
-              alt="Restaurant interior"
-              className="rounded-lg object-cover h-[200px] w-full shadow-lg"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1576048177169-f0622a66adbd"
-              alt="Restaurant ambiance"
-              className="rounded-lg object-cover h-[200px] w-full shadow-lg"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1594375188248-174763da4d69"
-              alt="Restaurant terrace"
-              className="rounded-lg object-cover h-[200px] w-full shadow-lg"
-            />
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl font-bold mb-4">Café Vista Alegre</h1>
+            <p className="text-xl text-muted-foreground mb-8">
+              Sabores auténticos con vista al mar
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <img
+                src="https://images.unsplash.com/photo-1708597543370-604fb27a9754"
+                alt="Restaurant interior"
+                className="rounded-lg object-cover h-[200px] w-full shadow-lg"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1576048177169-f0622a66adbd"
+                alt="Restaurant ambiance"
+                className="rounded-lg object-cover h-[200px] w-full shadow-lg"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1594375188248-174763da4d69"
+                alt="Restaurant terrace"
+                className="rounded-lg object-cover h-[200px] w-full shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -40,18 +42,20 @@ export default function Home() {
       {/* Menu Section */}
       <section id="menu" className="w-full py-16 scroll-mt-20">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8 text-center">Nuestro Menú</h2>
-          {categories.map((category) => {
-            const items = menuItems.filter((item) => item.category === category);
-            if (items.length === 0) return null;
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold mb-8 text-center">Nuestro Menú</h2>
+            {categories.map((category) => {
+              const items = menuItems.filter((item) => item.category === category);
+              if (items.length === 0) return null;
 
-            return (
-              <div key={category} className="mb-12">
-                <h3 className="text-2xl font-semibold mb-4">{category}</h3>
-                <MenuCarousel items={items} />
-              </div>
-            );
-          })}
+              return (
+                <div key={category} className="mb-12">
+                  <h3 className="text-2xl font-semibold mb-4">{category}</h3>
+                  <MenuCarousel items={items} />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
