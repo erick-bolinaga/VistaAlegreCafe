@@ -29,8 +29,14 @@ export default defineConfig({
     },
   },
   root: path.resolve(__dirname, "client"),
+  base: '/VistaAlegreCafe/',
   build: {
-    outDir: path.resolve(__dirname, "dist/public"),
+    outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: 'public/index.html'
+      }
+    }
   },
 });
