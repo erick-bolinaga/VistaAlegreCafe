@@ -13,10 +13,10 @@ export default function Layout({ children }: { children: ReactNode }) {
   return (
     <div className="min-h-screen bg-background">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4">
           <div className="flex h-16 items-center justify-between max-w-4xl mx-auto">
             <Logo />
-            <nav className="hidden md:flex items-center space-x-6">
+            <nav className="flex items-center space-x-6">
               <button 
                 onClick={() => scrollToSection('menu')}
                 className="text-sm font-medium transition-colors hover:text-primary"
@@ -35,12 +35,10 @@ export default function Layout({ children }: { children: ReactNode }) {
       </header>
       <main className="flex-1">{children}</main>
       <footer className="border-t py-6 md:py-0">
-        <div className="container flex flex-col items-center justify-center gap-4 md:h-24 md:flex-row">
-          <div className="flex flex-col items-center text-center px-8 md:px-0">
-            <p className="text-sm leading-loose">
-              © 2024 Café Vista Alegre. Todos los derechos reservados.
-            </p>
-          </div>
+        <div className="w-full grid py-6 items-center justify-center gap-4 md:h-24 md:flex-row">
+          <p className="text-sm leading-loose text-center">
+            © 2024 Café Vista Alegre. Todos los derechos reservados.
+          </p>
         </div>
       </footer>
     </div>

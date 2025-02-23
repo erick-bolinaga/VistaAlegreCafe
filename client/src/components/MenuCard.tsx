@@ -3,7 +3,7 @@ import { type MenuItem } from "@shared/schema";
 
 export default function MenuCard({ item }: { item: MenuItem }) {
   return (
-    <Card className="w-[300px]">
+    <Card className="w-[260px]">
       <CardHeader className="p-0">
         <img
           src={item.imageUrl}
@@ -14,7 +14,7 @@ export default function MenuCard({ item }: { item: MenuItem }) {
       <CardContent className="p-4">
         <div className="flex justify-between items-start mb-2">
           <h3 className="font-semibold text-lg">{item.name}</h3>
-          <span className="text-primary font-bold">${item.price.toFixed(2)}</span>
+          {item.hit && <span className="text-primary font-bold">HIT</span>}
         </div>
         <p className="text-sm text-muted-foreground">{item.description}</p>
       </CardContent>
