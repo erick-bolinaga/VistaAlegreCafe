@@ -1,12 +1,17 @@
 import { z } from "zod";
 import panCroqueta from "@/assets/images/pan-con-croqueta.jpg";
 import panJamonQueso from "@/assets/images/pan-jamon-queso.jpg";
+import hamburguesa from "@/assets/images/hamburguesa.jpg";
 import lomoAhumado from "@/assets/images/lomo-ahumado.jpg";
 import salchicha from "@/assets/images/salchicha.jpg";
 import picadillo from "@/assets/images/picadillo.jpg";
 import higado from "@/assets/images/higado.jpg";
 import chuleta from "@/assets/images/chuleta.jpg";
+import polloAsado from "@/assets/images/pollo-asado.jpg";
 import ensalada from "@/assets/images/ensalada.jpg";
+import arrozBlanco from "@/assets/images/arroz-blanco.jpg";
+import arrozAmarillo from "@/assets/images/arroz-amarillo.jpg";
+import frijolesColorados from "@/assets/images/frijoles-colorados.jpg";
 import refrescos from "@/assets/images/refrescos.jpg";
 import cervezas from "@/assets/images/cervezas.jpg";
 import aguaMaltaEnergizantes from "@/assets/images/agua-malta-energizantes.jpg";
@@ -47,21 +52,21 @@ export const menuItems: MenuItem[] = [
     description: "Pan, hamburguesa de cerdo o pollo, lechuga, tomate, pepinillos, cebolla",
     category: "Panes",
     hit: false,
-    imageUrl: panJamonQueso
+    imageUrl: hamburguesa
   },
   // Platos principales
   {
     id: 4,
     name: "Fricase de pollo",
-    description: "Pollo guisado con papas, zanahorias y guisantes",
+    description: "Cocinado con aceite vegetal, tomate natural, pimiento, cebolla y ajo",
     category: "Platos principales",
     hit: true,
-    imageUrl: lomoAhumado
+    imageUrl: polloAsado
   },
   {
     id: 5,
     name: "Higado a la italiana",
-    description: "Hígado de res cocinado con cebolla y pimientos",
+    description: "Cocinado con pimiento, ajo, cebolla y vino seco",
     category: "Platos principales",
     hit: false,
     imageUrl: higado
@@ -69,7 +74,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 6,
     name: "Picadillo de pollo",
-    description: "Picadillo de pollo con papas y aceitunas",
+    description: "Cocinado con tomate natural, ajo, cebolla y pimiento",
     category: "Platos principales",
     hit: true,
     imageUrl: picadillo
@@ -77,7 +82,7 @@ export const menuItems: MenuItem[] = [
   {
     id: 7,
     name: "Chuleta de cerdo",
-    description: "Chuleta de cerdo a la parrilla con puré de papas",
+    description: "Chuleta marinada con limón y ajo cocinada en la plancha con cebolla",
     category: "Platos principales",
     hit: false,
     imageUrl: chuleta
@@ -85,15 +90,15 @@ export const menuItems: MenuItem[] = [
   {
     id: 8,
     name: "Pollo asado",
-    description: "Pollo asado con hierbas y limón",
+    description: "Marinado limón, ajo horneada con cebolla",
     category: "Platos principales",
     hit: true,
-    imageUrl: lomoAhumado
+    imageUrl: polloAsado
   },
   {
     id: 9,
     name: "Lomo ahumado",
-    description: "Lomo de cerdo ahumado con salsa barbacoa",
+    description: "Cocinado en la plancha con cebolla",
     category: "Platos principales",
     hit: false,
     imageUrl: lomoAhumado
@@ -101,15 +106,15 @@ export const menuItems: MenuItem[] = [
   {
     id: 10,
     name: "Caldosa",
-    description: "Sopa espesa con carne de cerdo y vegetales",
+    description: "Concentrado de pollo, viandas y tomate natural",
     category: "Platos principales",
     hit: true,
-    imageUrl: lomoAhumado
+    imageUrl: frijolesColorados
   },
   {
     id: 11,
     name: "Salchicha en salsa",
-    description: "Salchichas cocinadas en salsa de tomate y cebolla",
+    description: "Cocinado con tomate natural, ajo, cebolla y pimiento",
     category: "Platos principales",
     hit: false,
     imageUrl: salchicha
@@ -121,7 +126,7 @@ export const menuItems: MenuItem[] = [
     description: "Arroz blanco cocido",
     category: "Guarniciones",
     hit: true,
-    imageUrl: lomoAhumado
+    imageUrl: arrozBlanco
   },
   {
     id: 13,
@@ -129,7 +134,7 @@ export const menuItems: MenuItem[] = [
     description: "Arroz amarillo con especias",
     category: "Guarniciones",
     hit: true,
-    imageUrl: lomoAhumado
+    imageUrl: arrozAmarillo
   },
   {
     id: 14,
@@ -137,7 +142,7 @@ export const menuItems: MenuItem[] = [
     description: "Frijoles colorados cocidos",
     category: "Guarniciones",
     hit: true,
-    imageUrl: lomoAhumado
+    imageUrl: frijolesColorados
   },
   {
     id: 15,
@@ -145,7 +150,7 @@ export const menuItems: MenuItem[] = [
     description: "Frijoles negros cocidos",
     category: "Guarniciones",
     hit: false,
-    imageUrl: lomoAhumado
+    imageUrl: frijolesColorados
   },
   // Bebidas
   {
@@ -170,6 +175,54 @@ export const menuItems: MenuItem[] = [
     description: "Cervezas nacionales e importadas",
     category: "Bebidas",
     hit: true,
+    imageUrl: cervezas
+  },
+  {
+    id: 17,
+    name: "Café expresso",
+    description: "Café expresso recién hecho",
+    category: "Bebidas",
+    hit: true,
+    imageUrl: cervezas
+  },
+  {
+    id: 18,
+    name: "Café cortado",
+    description: "Café expresso con una pequeña cantidad de leche",
+    category: "Bebidas",
+    hit: false,
+    imageUrl: cervezas
+  },
+  {
+    id: 19,
+    name: "Café capuchino",
+    description: "Café expresso con leche espumada y cacao en polvo",
+    category: "Bebidas",
+    hit: false,
+    imageUrl: cervezas
+  },
+  {
+    id: 20,
+    name: "Café con leche",
+    description: "Café expresso con leche caliente",
+    category: "Bebidas",
+    hit: false,
+    imageUrl: cervezas
+  },
+  {
+    id: 21,
+    name: "Té negro caliente",
+    description: "Té negro servido caliente",
+    category: "Bebidas",
+    hit: false,
+    imageUrl: cervezas
+  },
+  {
+    id: 22,
+    name: "Té negro frío",
+    description: "Té negro servido con hielo",
+    category: "Bebidas",
+    hit: false,
     imageUrl: cervezas
   }
 ];

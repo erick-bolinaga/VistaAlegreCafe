@@ -87,7 +87,7 @@ export default function Home() {
                   <Clock className="h-5 w-5 min-w-5 text-primary" />
                   <div>
                     <p>Lunes - Viernes: 8:30 AM - 9:00 PM</p>
-                    <p>Sábado - Domingo: 8:30 AM - 9:00 PM</p>
+                    <p>Sábado - Domingo: 8:30 AM - 10:30 PM</p>
                   </div>
                 </div>
               </div>
