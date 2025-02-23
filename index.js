@@ -45,12 +45,7 @@ var vite_config_default = defineConfig({
   base: "/VistaAlegreCafe/",
   build: {
     outDir: path.resolve(__dirname, "dist"),
-    emptyOutDir: true,
-    rollupOptions: {
-      input: {
-        main: "public/index.html"
-      }
-    }
+    emptyOutDir: true
   }
 });
 
