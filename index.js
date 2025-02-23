@@ -42,9 +42,15 @@ var vite_config_default = defineConfig({
     }
   },
   root: path.resolve(__dirname, "client"),
+  base: "/VistaAlegreCafe/",
   build: {
-    outDir: path.resolve(__dirname, "dist/public"),
-    emptyOutDir: true
+    outDir: path.resolve(__dirname, "dist"),
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        main: "public/index.html"
+      }
+    }
   }
 });
 
