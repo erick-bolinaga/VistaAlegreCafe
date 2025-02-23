@@ -29,7 +29,7 @@ export default defineConfig({
     },
   },
   root: path.resolve(__dirname, "client"),
-  base: '/VistaAlegreCafe/',
+  base: process.env.NODE_ENV === 'production' ? '/VistaAlegreCafe/' : '/',
   build: {
     outDir: path.resolve(__dirname, "dist"),
     emptyOutDir: true,

@@ -7,12 +7,13 @@ import NotFound from "@/pages/not-found";
 import Layout from "@/components/Layout";
 
 function AppRouter() {
-  const base = "/VistaAlegreCafe"
+  const base = import.meta.env.BASE_URL
+  
   return (
     <Router base={base}>
       <Switch>
-        <Route path={`${base}/`} component={Home} />
-        <Route path={`${base}/*`} component={NotFound} />
+        <Route path="/" component={Home} />
+        <Route component={NotFound} />
       </Switch>
     </Router>
   );
