@@ -100,7 +100,7 @@ export default function Home() {
               <img
                 src={restaurantQRCode}
                 alt="Restaurant interior"
-                className="rounded-lg object-cover h-[200px] w-full shadow-lg"
+                className="w-full"
               />
             </CardContent>
           </Card>
